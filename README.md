@@ -3,7 +3,7 @@
 - Support ~~OFRP~~, SHRP, TWRP compilation and production
 
 # Must Set github token secret 
-Name*: GH_TOKEN
+Name*: GHUB_TOKEN
 Secret*: Your Github Token (with push permissions)
 
 # Must Setup Cirrus-CI from github marketplace
