@@ -69,7 +69,7 @@ jobs:
     - name: Commit & Push changes
       uses: actions-js/push@master
       with:
-        github_token: ${{ secrets.GH_TOKEN }}
+        github_token: ${{ secrets.GHUB_TOKEN }}
         author_email: 'ci.twrp@gmail.com'
         author_name: 'RecoveryBuilder'
         message: 'RecoveryBuilder: Trigger Build'
