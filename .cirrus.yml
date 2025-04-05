@@ -1,5 +1,5 @@
 env:
-    CONF: ENCRYPTED[17734ee79c1e2cf68dbe1ceda758944943084909444fcce73b3c1b219789010d4fe87ba228cff103656b1b30aa5223e5]
+    CONFIG: config.sh
     CIRRUS_SHELL: bash
 
 task:
@@ -7,14 +7,12 @@ task:
   timeout_in: 120m
   container:
       image: shazuxdubuntu/ubuntu:latest
-      region: eu-central-1
       cpu: 8
-      memory: 32G
+      memory: 20G
 
   Sync_script:
-      - git clone $CONF tr &&cd tr &&python3 sync.py
-      - #curl -sL https://github.com/ShazuxD/CirrusCI-Recovery-Builder/raw/main/scripts/sync.sh | bash
+      - curl -sL https://github.com/ShazuxD/CirrusCI-Recovery-Builder/raw/main/scripts/sync.sh | bash
   Build_script:
-      - #curl -sL https://github.com/ShazuxD/CirrusCI-Recovery-Builder/raw/main/scripts/build.sh | bash
+      - curl -sL https://github.com/ShazuxD/CirrusCI-Recovery-Builder/raw/main/scripts/build.sh | bash
   Upload_script:
-      - #curl -sL https://github.com/ShazuxD/CirrusCI-Recovery-Builder/raw/main/scripts/upload.sh | bash
+      - curl -sL https://github.com/ShazuxD/CirrusCI-Recovery-Builder/raw/main/scripts/upload.sh | bash
